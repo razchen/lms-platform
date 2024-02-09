@@ -128,6 +128,8 @@ export async function PATCH(
         });
       }
 
+      console.log('existingMuxData', existingMuxData)
+
       const asset = await Video.Assets.create({
         input: values.videoUrl,
         playback_policy: "public",
