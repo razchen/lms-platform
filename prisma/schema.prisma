@@ -1,6 +1,6 @@
 datasource db {
-  provider     = "mysql"
-  url          = env("DATABASE_URL")
+  provider     = "postgres"
+  url          = env("POSTGRES_PRISMA_URL")
   relationMode = "prisma"
 }
 
@@ -29,7 +29,7 @@ model Course {
   updatedAt DateTime @updatedAt
 
   @@index([categoryId])
-  @@fulltext([title])
+  // @@fulltext([title])
 }
 
 model Category {
